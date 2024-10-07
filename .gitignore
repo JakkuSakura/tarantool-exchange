@@ -1,0 +1,9 @@
+.idea
+.rocks
+distfiles
+include
+instances.enabled
+modules
+templates
+*.snap
+*.xlog
