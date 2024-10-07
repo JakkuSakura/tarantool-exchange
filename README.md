@@ -79,8 +79,24 @@ It's still possible to support maker order, we need to implement a real price-ti
 The notional value of a position is the same as the order, so it's similar to calculate the margin afterwards without
 affecting the orderbook.
 
-The testing are written in Python because I'm more familial with Python requests library. 
+The testing are written in Python because I'm more familial with Python requests library.
 
+## Organization
 
+I split the code into multiple parts:
 
+1. constants
+2. utilities
+3. Database Access Layer
+4. business logic
+5. REST API handlers
+6. routes
+7. main
+8. tests
+
+Tarantool's number indexed result is error-prone. So it's probably better to add another layer `3. models`, and access
+them
+with tables.
+
+When the logic become very complex, it's also good to have a view layer
 
